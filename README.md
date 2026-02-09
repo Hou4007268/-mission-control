@@ -48,23 +48,47 @@ cd mission-control
 
 # 安装依赖
 npm install
+```
 
-# 配置环境变量
-cp .env.example .env.local
-# 编辑 .env.local 填入你的 Convex URL
+### 部署 Convex 云端数据库
 
-# 启动开发服务器
-npm run dev
+```bash
+# 1. 登录 Convex（需要浏览器授权）
+npx convex dev
+
+# 2. 选择 "create a new project"
+# 3. 输入项目名称（如：my-mission-control）
+# 4. 等待部署完成，自动写入 .env.local
 ```
 
 ### 数据同步
 
 ```bash
-# 同步记忆文件到数据库
+# 同步 OpenClaw 记忆文件到数据库
 npm run import-docs
 
 # 同步 Cron 任务到数据库
 npm run sync-cron
+```
+
+### 启动开发服务器
+
+```bash
+npm run dev
+# 访问 http://localhost:3000
+```
+
+### 生产部署（Vercel）
+
+```bash
+# 1. 推送到 GitHub
+git push origin main
+
+# 2. 在 Vercel 导入项目
+# 3. 添加环境变量（从 .env.local 复制）
+#    - NEXT_PUBLIC_CONVEX_URL
+#    - CONVEX_DEPLOYMENT
+# 4. 部署完成
 ```
 
 ## 🏗️ 技术架构
