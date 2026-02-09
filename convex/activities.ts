@@ -137,10 +137,11 @@ export const searchDocuments = query({
   },
   handler: async (ctx, args) => {
     if (args.type) {
+      const typeValue = args.type; // capture the narrowed value
       return await ctx.db
         .query("documents")
         .withSearchIndex("search_content", (q) =>
-          q.search("content", args.query).eq("type", args.type)
+          q.search("content", args.query).eq("type", typeValue)
         )
         .take(20);
     }
