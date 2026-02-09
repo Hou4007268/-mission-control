@@ -43,7 +43,7 @@ Mission Control 是一个专为 OpenClaw/AI 工作流设计的可视化仪表盘
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/mission-control.git
+git clone https://github.com/Hou4007268/mission-control.git
 cd mission-control
 
 # 安装依赖
@@ -170,7 +170,7 @@ export default function YourChart() {
 
 有任何问题或建议？欢迎通过以下方式联系：
 - GitHub Issues
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- Twitter: [@y5065236990506](https://twitter.com/y5065236990506)
 
 ---
 
